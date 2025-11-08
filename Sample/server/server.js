@@ -9,7 +9,7 @@ const app = express();
 const server = http.createServer(app);
 
 // ✅ Use your deployed Vercel frontend URL here
-const FRONTEND_URL = "https://collaborative-canvas-five.vercel.app";
+const FRONTEND_URL = "https://realcollaborative-drawing.vercel.app/";
 
 app.use(
   cors({
