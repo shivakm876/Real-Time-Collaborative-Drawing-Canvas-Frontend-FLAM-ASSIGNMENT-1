@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     joinRoom(roomCodeInput.value.toUpperCase(), userNameInput.value);
   });
 
-  // Copy room code
+
   copyCodeBtn.addEventListener('click', () => {
     navigator.clipboard.writeText(currentRoomCode).then(() => alert('Room code copied!'));
   });
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
     leaveRoom();
   });
 
-  // Auto-join on load if saved
+
   const savedCode = localStorage.getItem('roomCode');
   const savedName = localStorage.getItem('userName');
   if (savedCode && savedName) {
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     joinRoom(savedCode, savedName);
   }
 
-  // Setup toolbar (only after joining)
+
   function setupToolbar() {
     document.getElementById('brush').addEventListener('click', () => canvasManager.setTool('brush'));
     document.getElementById('eraser').addEventListener('click', () => canvasManager.setTool('eraser'));
