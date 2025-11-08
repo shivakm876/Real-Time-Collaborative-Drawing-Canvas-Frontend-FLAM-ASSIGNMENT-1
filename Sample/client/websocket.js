@@ -1,6 +1,6 @@
 class WebSocketManager {
   constructor(roomCode, userName) {
-    // this.socket = io("https://collaborative-canvas-0aui.onrender.com");
+    
     this.socket = io("https://collaborative-canvas-0aui.onrender.com", {
       transports: ["websocket"],
     });
@@ -16,7 +16,7 @@ class WebSocketManager {
     this.socket.on('joined-room', (data) => {
       this.userId = data.userId;
       this.updateUserList(data.users);
-      // Load existing strokes and start redraw loop
+     
       if (this.canvasManager) {
         data.strokes.forEach(stroke => this.canvasManager.addStroke(stroke));
         this.canvasManager.startRedraw(); // Start the redraw loop now that strokes are loaded
