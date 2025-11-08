@@ -1,4 +1,4 @@
-# Canvas
+# Real-Time Collaborative Drawing Canvas
 
 A real-time multi-user drawing application where users can collaborate on a shared canvas in isolated rooms. Built with Vanilla JavaScript, HTML5 Canvas, Node.js, and Socket.io.
 
