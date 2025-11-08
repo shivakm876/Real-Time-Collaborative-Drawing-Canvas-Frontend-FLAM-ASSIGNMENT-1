@@ -8,7 +8,7 @@ const Rooms = require("./rooms");
 const app = express();
 const server = http.createServer(app);
 
-// ✅ Use your deployed Vercel frontend URL here
+
 const FRONTEND_URL = "https://realcollaborative-drawing.vercel.app/";
 
 app.use(
@@ -19,7 +19,6 @@ app.use(
   })
 );
 
-// ✅ Create socket.io instance with same CORS config
 const io = new Server(server, {
   cors: {
     origin: [FRONTEND_URL, "http://localhost:3000"],
@@ -28,7 +27,7 @@ const io = new Server(server, {
   },
 });
 
-// ✅ Serve frontend files (optional — for debugging)
+
 app.use(express.static(path.join(__dirname, "../client")));
 
 const rooms = new Rooms();
